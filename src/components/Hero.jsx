@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import Button from './Button';
+import resume from '../assets/Resume.pdf';
+import profilePhoto from '../assets/Profilephoto.jpeg';
 
 export default function Hero() {
   const [imageError, setImageError] = useState(false);
@@ -46,7 +48,7 @@ export default function Hero() {
                 </svg>
               </Button>
               <Button
-                href="/resume/Biren-Badrakiya-Resume.pdf"
+                href={resume}
                 variant="secondary"
                 download
                 aria-label="Download resume PDF"
@@ -77,7 +79,7 @@ export default function Hero() {
               <div className="relative w-full h-full rounded-2xl overflow-hidden bg-bg-card border border-border flex items-center justify-center">
                 {!imageError ? (
                   <img
-                    src="src/assets/Profilephoto.jpeg"
+                    src={profilePhoto}
                     alt="Biren Badrakiya — Junior Full-Stack Developer"
                     className="w-full h-full object-cover"
                     loading="eager"

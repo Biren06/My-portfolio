@@ -1,3 +1,8 @@
+import blogImage from '../assets/blog.png';
+import portfolioImage from '../assets/portfolio.png';
+
+
+
 const projects = [
   {
     id: 1,
@@ -32,7 +37,7 @@ const projects = [
       'Seamless navigation',
       'Local development using XAMPP',
     ],
-    image: 'src/assets/blog.png',
+    image: blogImage,
     liveUrl: '#', // Replace with actual live URL
     githubUrl: '#', // Replace with actual GitHub URL
   },
@@ -49,7 +54,7 @@ const projects = [
       'Project showcase',
       'Cross-device compatibility',
     ],
-    image: 'src/assets/portfolio.png',
+    image: portfolioImage,
     liveUrl: '#', // Replace with actual live URL
     githubUrl: '#', // Replace with actual GitHub URL
   },

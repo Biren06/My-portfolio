@@ -1,6 +1,7 @@
 import { useState, useCallback, useEffect } from 'react';
 import Section from './Section';
 import Button from './Button';
+import resume from '../assets/Resume.pdf';
 
 const initialFormState = { name: '', email: '', message: '' };
 
@@ -163,7 +164,7 @@ export default function Contact() {
             </a>
 
             <a
-              href="/resume/Biren-Badrakiya-Resume.pdf"
+              href={resume}
               download
               className="flex items-center gap-3 text-sm text-secondary hover:text-accent transition-colors group"
             >
