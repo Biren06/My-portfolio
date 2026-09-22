@@ -1,0 +1,152 @@
+@import "tailwindcss";
+
+:root,
+[data-theme="light"],
+.light {
+  --bg-primary: #F8F5EF;
+  --bg-secondary: #EEE8DE;
+  --bg-card: #FCFAF6;
+  --text-primary: #292722;
+  --text-secondary: #625D55;
+  --text-muted: #8A847B;
+  --border: #DCD5C9;
+  --accent: #9A7653;
+  --accent-hover: #7F5F40;
+  --accent-light: rgba(154, 118, 83, 0.12);
+  --btn-accent-text: #FFFFFF;
+}
+
+[data-theme="dark"],
+.dark {
+  --bg-primary: #171614;
+  --bg-secondary: #211F1B;
+  --bg-card: #25231F;
+  --text-primary: #F3EFE7;
+  --text-secondary: #C5BFB4;
+  --text-muted: #8F897F;
+  --border: #3A362F;
+  --accent: #B8956D;
+  --accent-hover: #C7A47C;
+  --accent-light: rgba(184, 149, 109, 0.16);
+  --btn-accent-text: #171614;
+}
+
+@theme {
+  --font-heading: "Playfair Display", Georgia, serif;
+  --font-body: "Inter", system-ui, sans-serif;
+
+  --color-bg-primary: var(--bg-primary);
+  --color-bg-secondary: var(--bg-secondary);
+  --color-bg-card: var(--bg-card);
+  --color-soft-bg: var(--bg-secondary);
+  --color-white: var(--bg-card);
+
+  --color-primary: var(--text-primary);
+  --color-secondary: var(--text-secondary);
+  --color-muted: var(--text-muted);
+
+  --color-border: var(--border);
+
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-light: var(--accent-light);
+  --color-btn-accent-text: var(--btn-accent-text);
+
+  --spacing-18: 4.5rem;
+}
+
+/* Base styles */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Smooth theme transition */
+body,
+header,
+nav,
+section,
+footer,
+article,
+div,
+button,
+a,
+input,
+textarea,
+span,
+p,
+h1,
+h2,
+h3,
+ul,
+li {
+  transition-property: background-color, color, border-color, stroke, fill;
+  transition-duration: 200ms;
+  transition-timing-function: ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Focus visible styles */
+*:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Selection */
+::selection {
+  background-color: var(--accent);
+  color: var(--btn-accent-text);
+}
+
+/* Smooth entrance animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out both;
+}
+
+.animate-delay-100 {
+  animation-delay: 0.1s;
+}
+.animate-delay-200 {
+  animation-delay: 0.2s;
+}
+.animate-delay-300 {
+  animation-delay: 0.3s;
+}
+.animate-delay-400 {
+  animation-delay: 0.4s;
+}
